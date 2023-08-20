@@ -1,1 +1,36 @@
-<p>user-form works!</p>
+<!--<form>-->
+<div class="form-group ">
+  <label for="name">Name</label>
+  <input (change)="onChange($event)" id="name" class="form-control mt-1" type="text" [value]="name">
+</div>
+<p>
+  {{name}}
+</p>
+<div class="form-group ">
+  <label for="age">Age</label>
+  <input id="age" class="form-control mt-1" type="number" [(ngModel)]="age">
+</div>
+
+<div class="form-group ">
+  <label for="warning">Warning</label>
+  <input id="warning" type="checkbox" [(ngModel)]="isWarning">
+</div>
+<p class="{{colorWarning()}}">Angular Study</p>
+
+<div class="form-group ">
+  <label for="checked">Checked</label>
+  <input id="checked" type="checkbox" [(ngModel)]="checked">
+</div>
+<p [class.backColor]="!checked" >Angular Study</p>
+
+<div class="form-group ">
+  <label for="checked2">Checked2</label>
+  <input id="checked2" type="checkbox" [(ngModel)]="checked2">
+</div>
+<p [ngClass]="checked2 ? 'warning' : 'no-warning'" >Angular Study</p>
+
+<button (click)="saveClick($event)" class="btn btn-primary mt-1">
+  Save
+</button>
+<!--</form>-->
+
