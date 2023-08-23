@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {User} from "../../models/user.model";
 
 @Component({
@@ -7,6 +7,15 @@ import {User} from "../../models/user.model";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-  title: User = new User("Ben", 39);
+  title: string = "Список пользователей";
+  userAge: number;
+  user: User;
 
+  constructor() {
+    this.user = new User('Zahar', 25)
+  }
+
+  ngOnInit(): void {
+
+  }
 }

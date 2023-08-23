@@ -9,8 +9,7 @@ import {Component} from '@angular/core';
 export class UserFormComponent {
   name: string = "Ben";
   age: number = 42;
-
-  calspan: number = 2;
+  title: string = "Форма добавления пользователя";
   counter: number = 0;
   isWarning: boolean = false;
   checked: boolean = false;
